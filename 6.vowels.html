@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>vowels</h1>
+    <p id="demo"></p>
+    <h1>concontents</h1>
+    <p id="demo1"></p>
+
+
+    <style>
+        p{
+            color: red;
+            font-size: 30px;
+            font-weight: bolder;
+        
+        }
+    </style>
+    <script>
+
+        let strOne = "Dineshkumar";  // take any string
+
+        //String convert into lower case
+        var str = strOne.toLowerCase();
+        let vowelarr = ['a', 'e', 'i', 'o', 'u'];  //  use vowels array
+
+        //  here's we are splitting str string with space.
+        let strArr = [...str];
+
+        var html = '';
+        var htmlV = '';
+
+        //for loop for strArr 
+        for (i = 0; i < strArr.length; i++) {
+            let field = '';
+            //for loop for vowelarr 
+            for (j = 0; j < vowelarr.length; j++) {
+                if (strArr[i] == vowelarr[j]) {
+                    field = strArr[i];
+                    htmlV += strArr[i] + '</br>'  // adding only vowels in htmlv variable
+                }
+
+            }
+            if (strArr[i] != field) {
+                html += strArr[i] + '</br>'    //adding only  consonants in htmlv variable
+            }
+        }
+        document.getElementById("demo").innerHTML = htmlV;
+        document.getElementById("demo1").innerHTML = html;
+    </script>
+</body>
+
+</html>

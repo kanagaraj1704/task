@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 20px
+        }
+
+        input {
+            min-width: 50px !important;
+            max-width: 99.99% !important;
+            transition: width 0.25s;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="txt" type="text" value="changing input field" />
+
+    <script>
+        function resizable(el, factor) {
+            var int = Number(factor) || 7.7;
+            function resize() { el.style.width = ((el.value.length + 1) * int) + 'px' }
+            var e = 'keyup,keypress,focus,blur,change'.split(',');
+            for (var i in e) el.addEventListener(e[i], resize, false);
+            resize();
+        }
+        resizable(document.getElementById('txt'), 7);
+    </script>
+
+</body>
+
+</html>

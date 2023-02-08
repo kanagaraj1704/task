@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Add two arrays using concat() method:</h1>
+    <p id="concatenates"></p>
+
+    <p id="unique-value"></p>
+
+    <h3 id="sort"></h3>
+
+
+    <h4 id="point"></h4>
+
+
+    <script>
+        const array1 = ["java", "react", "css", "bmw", "volvo", "audi"];
+        const array2 = ["boostrap", "summa1", "summa2", "honda", "tvs", "toyota"];
+
+        const fullstack = array1.concat(array2);
+        document.getElementById("concatenates").innerHTML = fullstack;
+
+
+        const array3 = ["1", "2", "3", "4", "5", "5", "35", "89", "67", "12", "23", "65", "01","34865","543","1145","78", "34", "2", "43", "87", "99", "12", "5"];
+        const array4 = ["5", "4", "2", "1", "11", "12", "50", "20", "12"];
+        const unique = array3.concat(array4);
+
+        const uniqueChars = [...new Set(unique)];
+        document.getElementById("unique-value").innerHTML = uniqueChars;
+        
+        uniqueChars.sort(function (a, b) { return a - b });
+        document.getElementById("sort").innerHTML = uniqueChars;
+
+    </script>
+
+
+</body>
+
+</html>

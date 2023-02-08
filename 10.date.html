@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<h1>Demo: Current Date</h1>
+<p id="p1"></p>
+<p id="p2"></p>
+<script>
+	let date = new Date();
+	let current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+	document.getElementById("p1").innerHTML = current_date;
+
+
+    let date1 = new Date();
+    let cuttent_date1 =date1.getFullYear()+"-"+date1.getMonth()+"-"+date.getDate();
+    document.getElementById("p2").innerHTML=cuttent_date1;
+    </script>
+</body>
+</html>
